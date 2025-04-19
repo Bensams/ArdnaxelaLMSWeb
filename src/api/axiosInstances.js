@@ -3,7 +3,9 @@ import axios from 'axios';
 
 const baseConfig = {
   baseURL: import.meta.env.VITE_API_BASE_URL || 'https://af89-143-44-184-91.ngrok-free.app',  // Added '/api' to baseURL
-  headers: { 'Content-Type': 'application/json' }
+  headers: { 'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true' // Bypass Ngrok warning
+  },
 };
 
 // Public instance (no auth)
